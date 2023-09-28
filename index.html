@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <title>Ecomerce product page</title>
+</head>
+<body>
+  <div class="main_div">
+  
+    <div class="product_page">
+      <div class="product_gallery">
+
+        <div class="main_img">
+          <img src="/images/1.webp" class="featured_img" alt="boat speaker">
+
+        </div>
+
+        <div class="gallery">
+          <div class="img2 img"><img src="/images/1.webp" class="gallery_img" id="img1" alt="boat speaker"></div>
+          <div class="img2 img"><img src="/images/2.webp" class="gallery_img" id="img2" alt="boat speaker"></div>
+          <div class="img3 img"><img src="/images/3.webp" class="gallery_img" id="img3" alt="boat speaker"></div>
+          <div class="img4 img"><img src="/images/4.webp" class="gallery_img" id="img4" alt="boat speaker"></div>
+          <div class="img4 img"><img src="/images/5.webp" class="gallery_img" id="img5" alt="boat speaker"></div>
+        </div>
+
+
+      </div>
+
+      <div class="product_details">
+
+        <div class="Product_meta">
+          <div class="rating">
+          <img src="/images/star.svg" class="star" alt=""> <a href="#"><span>4.5 | 125 Reviews</span></a>
+          </div>
+          <h2 class="title">BoAt Stone 352 Hulk Edition </h2>
+          <h3 class="price"><span>₹</span>1299</h3>
+          <p class="info">It’s time to enjoy a seamless playback experience courtesy boAt Stone 352 10W RMS portable wireless speaker. The speaker comes equipped with 1.96” dynamic drivers for an immersive stereo experience.</p>
+          <h4 class="availble_colors">Availble Colors</h4>
+          <div class="color_box">
+            <div class="red"></div>
+            <div class="black"></div>
+            <div class="blue"></div>
+            <div class="grey"></div>
+            <div class="green"></div>
+          </div>
+          <div class="button">
+            <p>Add to Cart</p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+    
+  </div>
+  <script>
+
+    
+const featuredImage = document.querySelector(".featured_img");
+const thumbnailImages = document.querySelectorAll(".gallery_img");
+
+
+thumbnailImages.forEach(thumbnail => {
+  thumbnail.addEventListener("click", () => {
+    const thumbnailSrc = thumbnail.getAttribute("src");
+    featuredImage.setAttribute("src", thumbnailSrc);
+  });
+});
+
+  </script>
+
+  
+</body>
+</html>
